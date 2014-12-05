@@ -164,7 +164,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412051949501_InitialCreate.cs" />
+    <Compile Include="Migrations\201412051949501_InitialCreate.Designer.cs">
+      <DependentUpon>201412051949501_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412052029392_FirstMigration.cs" />
+    <Compile Include="Migrations\201412052029392_FirstMigration.Designer.cs">
+      <DependentUpon>201412052029392_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Context\ApplicationDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +236,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,6 +247,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManagementPortal.Core\TaskManagementPortal.Core.csproj">
+      <Project>{3113e387-7b21-4368-99bf-bd1e4f6457c8}</Project>
+      <Name>TaskManagementPortal.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201412051949501_InitialCreate.resx">
+      <DependentUpon>201412051949501_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412052029392_FirstMigration.resx">
+      <DependentUpon>201412052029392_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
